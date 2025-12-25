@@ -1,6 +1,6 @@
 baseURL = "https://hoangduccudcud.github.io/"
 languageCode = "vi-vn"
-title = "Lê Thanh Hoàng Đức"
+title = "Lê Thanh Hoàng Đức | Java Developer"
 theme = "PaperMod"
 
 [pagination]
@@ -9,115 +9,135 @@ theme = "PaperMod"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# =========================
-# MARKDOWN
-# =========================
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
-    style = "monokai"
-    lineNos = true
     noClasses = false
+    style = "dracula" # Đổi sang tone Dracula nhìn hiện đại và Pro hơn
+    lineNos = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
 
-# =========================
-# PARAMS CHUNG
-# =========================
 [params]
   env = "production"
   author = "Lê Thanh Hoàng Đức"
-  description = "Java Developer | Sinh viên CNTT HUTECH"
-
+  description = "Java Developer đam mê Backend & Spring Boot. Chia sẻ kiến thức lập trình và kinh nghiệm thực tế."
+  keywords = ["Java Developer", "Spring Boot", "Backend", "HUTECH", "Lập trình", "Hoàng Đức"]
+  
+  # Cấu hình giao diện (UI)
   defaultTheme = "auto"
   disableThemeToggle = false
-
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
-  ShowBreadCrumbs = false
+  ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  
+  
+  # Mục lục (Table of Contents)
   ShowToc = true
-  TocOpen = false
+  TocOpen = true # Mở sẵn để bài viết dài nhìn chuyên nghiệp hơn
 
-  DateFormat = "02/01/2006"
+  # Ảnh đại diện khi share link (SEO)
+  images = ["images/hero.jpg"]
 
-# =========================
-# PROFILE MODE (TRANG CHỦ)
-# =========================
-[params.profileMode]
-  enabled = true
-  title = "Lê Thanh Hoàng Đức"
-  subtitle = "Java Developer | Sinh viên CNTT HUTECH"
+  # Profile Mode (Trang chủ chính)
+  [params.profileMode]
+    enabled = true
+    title = "Lê Thanh Hoàng Đức đẹp trai"
+    subtitle = "🚀 **Java Developer** | Backend Enthusiast | HUTECH Student <br/> Xây dựng giải pháp công nghệ hiệu quả và chia sẻ giá trị cộng đồng."
+    imageUrl = "images/hero.jpg"
+    imageWidth = 300 # Size này giúp ảnh cân đối và chuyên nghiệp hơn 300
+    imageHeight = 300
+    imageTitle = "Lê Thanh Hoàng Đức"
+    
+    [[params.profileMode.buttons]]
+      name = "🔍 Về Tôi"
+      url = "about"
+    
+    [[params.profileMode.buttons]]
+      name = "✍️ Blog"
+      url = "posts"
+    
+    [[params.profileMode.buttons]]
+      name = "💼 Dự Án"
+      url = "projects"
 
-  imageUrl = "/images/hero.jpg"
-  imageTitle = "Lê Thanh Hoàng Đức"
-  imageWidth = 400
-  imageHeight = 400
+  # Các biểu tượng mạng xã hội (Sắp xếp theo thứ tự ưu tiên của Dev)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/hoangduccudcud"
 
-  [[params.profileMode.buttons]]
-    name = "Về Tôi"
-    url = "/about"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/hoangduccudcud"
 
-  [[params.profileMode.buttons]]
-    name = "Blog"
-    url = "/posts"
+  [[params.socialIcons]]
+    name = "facebook"
+    url = "https://www.facebook.com/lethanhhoangduc"
 
-  [[params.profileMode.buttons]]
-    name = "Dự Án"
-    url = "/projects"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:hoangduccudcud@gmail.com"
 
-# =========================
-# SOCIAL
-# =========================
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/hoangduccudcud"
-
-[[params.socialIcons]]
-  name = "email"
-  url = "mailto:hoangduccudcud@gmail.com"
-
-# =========================
-# MENU
-# =========================
+# Menu điều hướng (Gọn gàng, loại bỏ emoji thừa cho tinh tế)
 [menu]
   [[menu.main]]
-    name = "Trang Chủ"
-    url = "/"
-    weight = 1
-
-  [[menu.main]]
-    name = "Giới Thiệu"
-    url = "/about"
-    weight = 2
-
-  [[menu.main]]
-    name = "Blog"
+    identifier = "posts"
+    name = "Bài viết"
     url = "/posts"
-    weight = 3
-
+    weight = 10
+  
   [[menu.main]]
-    name = "Dự Án"
+    identifier = "projects"
+    name = "Dự án"
     url = "/projects"
-    weight = 4
+    weight = 20
 
   [[menu.main]]
-    name = "Liên Hệ"
-    url = "/contact"
-    weight = 5
+    identifier = "about"
+    name = "Giới thiệu"
+    url = "/about"
+    weight = 30
 
-# =========================
-# TAXONOMY
-# =========================
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Tìm kiếm"
+    url = "/search" # Lưu ý: Bạn cần tạo file content/search.md để dùng tính năng này
+    weight = 50
+
 [taxonomies]
   category = "categories"
   tag = "tags"
+  series = "series"
 
-# =========================
-# MINIFY
-# =========================
 [minify]
   minifyOutput = true
+  [minify.tdewolff.html]
+    keepWhitespace = false
+
+[related]
+  threshold = 80
+  includeNewer = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

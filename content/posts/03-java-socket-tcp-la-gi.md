@@ -7,7 +7,7 @@ tags: ["Java", "Socket", "TCP", "Networking"]
 categories: ["Java"]
 
 cover:
-  image: "/images/java-socket-tcp.jpg"
+  # image: "/images/java-socket-tcp.jpg"
   alt: "Java Socket TCP"
   caption: "Socket TCP trong Java"
 ---

@@ -11,8 +11,13 @@ Trong bài trước, chúng ta đã xây dựng một Server TCP đơn giản ch
 
 Bài này sẽ nâng cấp Server để hỗ trợ **nhiều Client đồng thời** bằng cách sử dụng **Multithreading** – một kỹ thuật rất quan trọng trong lập trình mạng.
 
+<!--
 ![Minh họa Multithread Server](https://media.geeksforgeeks.org/wp-content/uploads/20220502163844/MultiThreadedServer-660x396.png)
-*<p style="text-align:center; font-size:0.9rem; opacity:0.8;">Sơ đồ Server TCP đa luồng xử lý nhiều Client cùng lúc (Nguồn: GeeksforGeeks)</p>*
+<p style="text-align:center; font-size:0.9rem; opacity:0.8;">
+Sơ đồ Server TCP đa luồng xử lý nhiều Client cùng lúc (Nguồn: GeeksforGeeks)
+</p>
+-->
+
 
 ## Mục tiêu
 

@@ -7,7 +7,7 @@ tags: ["Java", "Networking", "Client-Server"]
 categories: ["Java"]
 
 cover:
-  image: "/images/client-server-model.jpg"
+  # image: "/images/client-server-model.jpg"
   alt: "Mô hình Client-Server"
   caption: "Kiến trúc Client – Server cơ bản"
 ---

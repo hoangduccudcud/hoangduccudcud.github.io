@@ -1,87 +1,199 @@
 /* ===============================
-   HOME – PROFILE MODE UPGRADE
+   HOME – PROFILE MODE ONLY
    =============================== */
 
-.profile {
-    max-width: 1100px;
-    margin: 80px auto 40px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 80px;
+.profile-mode {
+
+  /* ===== MAIN ===== */
+  .main {
+    min-height: 100vh;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    background:
+      radial-gradient(circle at top, rgba(160, 200, 255, 0.12), transparent 55%),
+      linear-gradient(135deg, #0b0e17, #121a2e);
+  }
+
+  /* ===== PROFILE CARD ===== */
+  .profile {
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 72px;
+    padding: 56px 64px;
+    border-radius: 28px;
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55);
+  }
+
+/* ===== SOFT CHRISTMAS FROST ===== */
+.profile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(190, 225, 255, 0.12),
+      rgba(255, 255, 255, 0.02),
+      rgba(150, 200, 255, 0.1)
+    );
+  opacity: 0.28;
+  pointer-events: none;
 }
 
-/* Text side */
-.profile .profile-content {
-    text-align: left;
+/* ===== SUBTLE WATERMARK ===== */
+.profile::before {
+  content: "JAVA · BACKEND";
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.35rem;
+  color: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
 }
 
+/* CONTENT ABOVE EFFECT */
+.profile > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TEXT SIDE ===== */
 .profile h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 16px;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+  color: #fff;
 }
 
 .profile h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    opacity: 0.8;
-    margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: rgba(220, 235, 255, 0.85);
 }
 
-.profile p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 16px;
-    color: var(--content);
+/* ===== SOCIAL ICONS ===== */
+.profile .social-icons {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 36px;
 }
 
-/* Buttons */
+.profile .social-icons a {
+  font-size: 1.8rem;
+  color: rgba(210, 230, 255, 0.65);
+  transition: all 0.3s ease;
+}
+
+.profile .social-icons a:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* ===== BUTTONS ===== */
 .profile .buttons {
-    margin-top: 28px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .profile .button {
-    padding: 12px 26px;
-    font-size: 0.95rem;
-    border-radius: 10px;
+  padding: 14px 38px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 14px;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #ffffff, #e8f2ff);
+  color: #000;
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
-/* Image side */
+.profile .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== IMAGE SIDE ===== */
 .profile .profile-img {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* SOFT ICE GLOW */
+.profile .profile-img::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 220, 255, 0.28),
+    transparent 65%
+  );
+  filter: blur(60px);
+  z-index: -1;
+}
+
+/* AVATAR */
+.profile img {
+  width: 380px;
+  height: 380px;
+  border-radius: 28px;
+  object-fit: cover;
+
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  transition: transform 0.4s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    text-align: center;
+  }
+
+  .profile .buttons,
+  .profile .social-icons {
     justify-content: center;
+  }
 }
 
-.profile img,
-.profile-mode img {
-    border-radius: 12px !important; /* bo nhẹ, đổi thành 0 nếu muốn vuông cứng */
-    object-fit: cover;
-}
+@media (max-width: 640px) {
+  .profile {
+    padding: 40px 24px;
+  }
 
-/* Tăng kích thước ảnh profile */
-.profile .avatar,
-.profile-mode .avatar {
-    width: 320px !important;
-    height: auto !important;
-    max-height: 420px;
-}
+  .profile h1 {
+    font-size: 3rem;
+  }
 
-/* Căn chỉnh lại layout cho cân */
-.profile {
-    gap: 24px;
-}
-
-
-/* Mobile */
-@media (max-width: 900px) {
-    .profile {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-
-    .profile .profile-content {
-        text-align: center;
-    }
+  .profile img {
+    width: 300px;
+    height: 300px;
+  }
 }
