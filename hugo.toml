@@ -1,6 +1,6 @@
 baseURL = "https://hoangduccudcud.github.io/"
 languageCode = "vi-vn"
-title = "Lê Thanh Hoàng Đức | Java Developer"
+title = "Lê Thanh Hoàng Đức | Java Developer "
 theme = "PaperMod"
 
 [pagination]
@@ -9,13 +9,12 @@ theme = "PaperMod"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
   [markup.highlight]
     noClasses = false
-    style = "dracula" # Đổi sang tone Dracula nhìn hiện đại và Pro hơn
+    style = "dracula"
     lineNos = true
   [markup.tableOfContents]
     startLevel = 2
@@ -25,11 +24,11 @@ theme = "PaperMod"
 [params]
   env = "production"
   author = "Lê Thanh Hoàng Đức"
-  description = "Java Developer đam mê Backend & Spring Boot. Chia sẻ kiến thức lập trình và kinh nghiệm thực tế."
+  description = "Java Developer đam mê Backend & Spring Boot. Chia sẻ kiến thức lập trình và kinh nghiệm thực tế. 🎄 Merry Christmas!"
   keywords = ["Java Developer", "Spring Boot", "Backend", "HUTECH", "Lập trình", "Hoàng Đức"]
   
-  # Cấu hình giao diện (UI)
-  defaultTheme = "auto"
+  # Cấu hình giao diện
+  defaultTheme = "dark" # Dark mode phù hợp với theme Giáng Sinh
   disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = true
@@ -39,37 +38,41 @@ theme = "PaperMod"
   ShowWordCount = false
   ShowRssButtonInSectionTermList = true
   
-  
-  # Mục lục (Table of Contents)
+  # Mục lục
   ShowToc = true
-  TocOpen = true # Mở sẵn để bài viết dài nhìn chuyên nghiệp hơn
+  TocOpen = true
 
-  # Ảnh đại diện khi share link (SEO)
+  # SEO
   images = ["images/hero.jpg"]
 
-  # Profile Mode (Trang chủ chính)
+  # Profile Mode - Christmas Edition
   [params.profileMode]
     enabled = true
     title = "Lê Thanh Hoàng Đức"
-    subtitle = "🚀 **Java Developer** | Backend Enthusiast | HUTECH Student <br/> Xây dựng giải pháp công nghệ hiệu quả và chia sẻ giá trị cộng đồng."
+    subtitle = " **Java Developer** | Backend Enthusiast | HUTECH Student <br/>  <br/> "
     imageUrl = "images/hero.jpg"
-    imageWidth = 300 # Size này giúp ảnh cân đối và chuyên nghiệp hơn 300
-    imageHeight = 300
-    imageTitle = "Lê Thanh Hoàng Đức"
+    imageWidth = 380  # Kích thước vuông chuẩn (khớp với CSS)
+    imageHeight = 380
+    imageTitle = "Lê Thanh Hoàng Đức - Java Developer"
     
     [[params.profileMode.buttons]]
-      name = "🔍 Về Tôi"
+      name = "Về Tôi"
       url = "about"
     
     [[params.profileMode.buttons]]
-      name = "✍️ Blog"
+      name = "Blog"
       url = "posts"
     
     [[params.profileMode.buttons]]
-      name = "💼 Dự Án"
+      name = "Dự Án"
       url = "projects"
+    
+    [[params.profileMode.buttons]]
+  name = "Liên Hệ"
+  url = "/contact/"
 
-  # Các biểu tượng mạng xã hội (Sắp xếp theo thứ tự ưu tiên của Dev)
+
+  # Social Icons
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hoangduccudcud"
@@ -86,37 +89,37 @@ theme = "PaperMod"
     name = "email"
     url = "mailto:hoangduccudcud@gmail.com"
 
-# Menu điều hướng (Gọn gàng, loại bỏ emoji thừa cho tinh tế)
+# Menu điều hướng
 [menu]
+
   [[menu.main]]
     identifier = "posts"
-    name = "Bài viết"
-    url = "/posts"
+    name = "Blog"
+    url = "/posts/"
     weight = 10
-  
+
   [[menu.main]]
     identifier = "projects"
     name = "Dự án"
-    url = "/projects"
+    url = "/projects/"
     weight = 20
 
   [[menu.main]]
     identifier = "about"
     name = "Giới thiệu"
-    url = "/about"
+    url = "/about/"
     weight = 30
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
-    url = "/tags"
+    url = "/tags/"
     weight = 40
 
-  [[menu.main]]
-    identifier = "search"
-    name = "Tìm kiếm"
-    url = "/search" # Lưu ý: Bạn cần tạo file content/search.md để dùng tính năng này
-    weight = 50
+
+
+
+ 
 
 [taxonomies]
   category = "categories"

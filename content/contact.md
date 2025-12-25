@@ -6,20 +6,20 @@ title: "Liên Hệ"
 
 Tôi luôn sẵn sàng trao đổi về lập trình, dự án cá nhân hoặc cơ hội học hỏi cùng nhau.
 
-<div class="contact-info" style="margin: 3rem 0; font-size: 1.1rem;">
+<div class="contact-info">
 
 **Email**  
-[your.email@gmail.com](mailto:your.email@gmail.com)
+[hoangduccudcud@gmail.com](mailto:hoangduccudcud@gmail.com)
 
 **GitHub**  
-[github.com/yourusername](https://github.com/yourusername)
+[github.com/hoangduccudcud](https://github.com/hoangduccudcud)
 
-**LinkedIn** (nếu có)  
+**LinkedIn**  
 [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
 
 </div>
 
-<div class="action-links" style="margin-top: 3rem; text-align: center;">
+<div class="action-links">
   <a href="/" class="button">Trang Chủ</a>
   <a href="/posts/" class="button">Blog</a>
   <a href="/projects/" class="button">Dự Án</a>
