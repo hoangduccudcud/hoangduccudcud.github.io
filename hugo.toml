@@ -1,0 +1,123 @@
+baseURL = "https://hoangduccudcud.github.io/"
+languageCode = "vi-vn"
+title = "Lê Thanh Hoàng Đức"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 8
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# =========================
+# MARKDOWN
+# =========================
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    noClasses = false
+
+# =========================
+# PARAMS CHUNG
+# =========================
+[params]
+  env = "production"
+  author = "Lê Thanh Hoàng Đức"
+  description = "Java Developer | Sinh viên CNTT HUTECH"
+
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+
+  ShowToc = true
+  TocOpen = false
+
+  DateFormat = "02/01/2006"
+
+# =========================
+# PROFILE MODE (TRANG CHỦ)
+# =========================
+[params.profileMode]
+  enabled = true
+  title = "Lê Thanh Hoàng Đức"
+  subtitle = "Java Developer | Sinh viên CNTT HUTECH"
+
+  imageUrl = "/images/hero.jpg"
+  imageTitle = "Lê Thanh Hoàng Đức"
+  imageWidth = 400
+  imageHeight = 400
+
+  [[params.profileMode.buttons]]
+    name = "Về Tôi"
+    url = "/about"
+
+  [[params.profileMode.buttons]]
+    name = "Blog"
+    url = "/posts"
+
+  [[params.profileMode.buttons]]
+    name = "Dự Án"
+    url = "/projects"
+
+# =========================
+# SOCIAL
+# =========================
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/hoangduccudcud"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:hoangduccudcud@gmail.com"
+
+# =========================
+# MENU
+# =========================
+[menu]
+  [[menu.main]]
+    name = "Trang Chủ"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Giới Thiệu"
+    url = "/about"
+    weight = 2
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts"
+    weight = 3
+
+  [[menu.main]]
+    name = "Dự Án"
+    url = "/projects"
+    weight = 4
+
+  [[menu.main]]
+    name = "Liên Hệ"
+    url = "/contact"
+    weight = 5
+
+# =========================
+# TAXONOMY
+# =========================
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# =========================
+# MINIFY
+# =========================
+[minify]
+  minifyOutput = true

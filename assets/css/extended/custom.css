@@ -1,0 +1,87 @@
+/* ===============================
+   HOME – PROFILE MODE UPGRADE
+   =============================== */
+
+.profile {
+    max-width: 1100px;
+    margin: 80px auto 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Text side */
+.profile .profile-content {
+    text-align: left;
+}
+
+.profile h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.profile h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: 24px;
+}
+
+.profile p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    color: var(--content);
+}
+
+/* Buttons */
+.profile .buttons {
+    margin-top: 28px;
+}
+
+.profile .button {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+}
+
+/* Image side */
+.profile .profile-img {
+    display: flex;
+    justify-content: center;
+}
+
+.profile img,
+.profile-mode img {
+    border-radius: 12px !important; /* bo nhẹ, đổi thành 0 nếu muốn vuông cứng */
+    object-fit: cover;
+}
+
+/* Tăng kích thước ảnh profile */
+.profile .avatar,
+.profile-mode .avatar {
+    width: 320px !important;
+    height: auto !important;
+    max-height: 420px;
+}
+
+/* Căn chỉnh lại layout cho cân */
+.profile {
+    gap: 24px;
+}
+
+
+/* Mobile */
+@media (max-width: 900px) {
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .profile .profile-content {
+        text-align: center;
+    }
+}
