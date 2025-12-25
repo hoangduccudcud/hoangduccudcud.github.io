@@ -19,20 +19,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout source
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # cần cho --enableGitInfo
+          submodules: true
+          fetch-depth: 0
 
-      # 2️⃣ Setup Hugo (LUÔN LÀ BẢN MỚI NHẤT)
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: latest
           extended: true
 
-      # 3️⃣ Build Hugo (PRODUCTION SAFE)
       - name: Build
         run: |
           hugo \
@@ -42,7 +40,6 @@ jobs:
             --enableGitInfo \
             --logLevel info
 
-      # 4️⃣ Upload artifact cho GitHub Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -57,7 +54,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 5️⃣ Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
