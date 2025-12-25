@@ -7,7 +7,8 @@ theme = "PaperMod"
   pagerSize = 8
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "RSS", "JSON"]
+
 
 [markup]
   [markup.goldmark.renderer]
