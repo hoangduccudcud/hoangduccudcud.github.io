@@ -45,15 +45,16 @@ theme = "PaperMod"
   # SEO
   images = ["images/hero.jpg"]
 
-  # Profile Mode - Christmas Edition
-  [params.profileMode]
-    enabled = true
-    title = "Lê Thanh Hoàng Đức"
-    subtitle = " **Java Developer** | Backend Enthusiast | HUTECH Student <br/>  <br/> "
-    imageUrl = "images/hero.jpg"
-    imageWidth = 380  # Kích thước vuông chuẩn (khớp với CSS)
-    imageHeight = 380
-    imageTitle = "Lê Thanh Hoàng Đức - Java Developer"
+# Profile Mode - Christmas Edition
+[params.profileMode]
+  enabled = true
+  title = "Lê Thanh Hoàng Đức"
+  subtitle = "**Java Developer** | Backend Enthusiast | HUTECH Student <br/><br/> Chậm mà chắc, miễn là không dừng lại."
+  imageUrl = "images/hero.jpg"
+  imageWidth = 380   # Kích thước vuông chuẩn (khớp với CSS)
+  imageHeight = 380
+  imageTitle = "Lê Thanh Hoàng Đức - Java Developer"
+
     
     [[params.profileMode.buttons]]
       name = "Về Tôi"
@@ -77,17 +78,14 @@ theme = "PaperMod"
     name = "github"
     url = "https://github.com/hoangduccudcud"
 
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/hoangduccudcud"
 
   [[params.socialIcons]]
     name = "facebook"
     url = "https://www.facebook.com/lethanhhoangduc"
 
   [[params.socialIcons]]
-    name = "email"
-    url = "mailto:hoangduccudcud@gmail.com"
+      name = "Email"
+      url = "https://mail.google.com/mail/?view=cm&fs=1&to=hoangduccudcud@gmail.com"
 
 # Menu điều hướng
 [menu]
@@ -115,7 +113,12 @@ theme = "PaperMod"
     name = "Tags"
     url = "/tags/"
     weight = 40
-
+    
+[[menu.main]]
+    identifier = "contact"
+    name = "Liên hệ"
+    url = "/contact/"
+    weight = 50
 
 
 

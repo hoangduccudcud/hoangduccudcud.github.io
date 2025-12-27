@@ -14,8 +14,7 @@ Tôi luôn sẵn sàng trao đổi về lập trình, dự án cá nhân hoặc 
 **GitHub**  
 [github.com/hoangduccudcud](https://github.com/hoangduccudcud)
 
-**LinkedIn**  
-[linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+
 
 </div>
 

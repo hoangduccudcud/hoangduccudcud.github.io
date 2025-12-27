@@ -1,7 +1,13 @@
 ---
 title: "Giới Thiệu"
+
 ---
 
+<div style="text-align:center; margin: 2rem 0;">
+  <img src="/images/hero.jpg"
+       alt="Hero"
+       style="max-width: 480px; width: 100%; border-radius: 12px;" />
+</div>
 ## 👋 Lê Thanh Hoàng Đức
 
 Sinh viên năm 3 **Công nghệ Thông tin – HUTECH**  
@@ -12,34 +18,49 @@ Mục tiêu của tôi là xây dựng các hệ thống **ổn định – dễ
 
 ---
 
-## 🛠️ Kỹ năng chính
+## 🎯 Sở thích
 
-### 🔹 Backend
-- **Java Core**
-- **Java Networking** (Socket TCP/UDP, Client–Server)
-- Multithreading & xử lý song song
+### ⚽ Thể thao
+- Thích **đá banh** để vận động và giải tỏa căng thẳng
+- Xem các trận bóng hay, đặc biệt là những trận đấu hấp dẫn
 
-### 🔹 Frontend cơ bản
-- **JavaScript**
-- DOM, Event Handling
-- Fetch API
+### 🎮 Giải trí
+- Chơi **game** để thư giãn sau giờ học và làm việc
+- Quan tâm đến các game có tính chiến thuật hoặc đồng đội
 
-### 🔹 Công cụ
-- Git & GitHub
-- Linux cơ bản
-- Deploy GitHub Pages (Hugo)
+### 🍜 Ăn uống
+- Thích **ăn uống**, khám phá các món ngon
+- Đam mê đồ ăn vặt và các quán ăn mới
+
+
 
 ---
 
 ## 🎓 Chứng chỉ & Khóa học
 
-<div class="cert-grid">
+<div class="cert-list">
 
-<img src="/images/certificates/cert-js-essentials.png" alt="JavaScript Essentials" />
-<img src="/images/certificates/cert-java.png" alt="Java Certificate" />
-<img src="/images/certificates/cert-network.png" alt="Networking Certificate" />
+<details class="cert-item">
+  <summary>📜 JavaScript Essentials 1</summary>
+  <img src="/images/certificates/cert-js-essentials.png"
+       alt="JavaScript Essentials 1" />
+</details>
+
+<details class="cert-item">
+  <summary>📜 Java Essentials 2</summary>
+  <img src="/images/certificates/cert-java.png"
+       alt="Java Essentials 2" />
+</details>
+
+<details class="cert-item">
+  <summary>📜 Networking Fundamentals</summary>
+  <img src="/images/certificates/cert-network.png"
+       alt="Networking Certificate" />
+</details>
 
 </div>
+
+
 
 ---
 
